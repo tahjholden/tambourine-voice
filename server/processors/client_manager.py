@@ -16,8 +16,8 @@ from typing import TYPE_CHECKING
 from loguru import logger
 
 if TYPE_CHECKING:
-    from pipecat.services.ai_services import STTService
     from pipecat.services.llm_service import LLMService
+    from pipecat.services.stt_service import STTService
     from pipecat.transports.smallwebrtc.connection import SmallWebRTCConnection
 
     from processors.context_manager import DictationContextManager

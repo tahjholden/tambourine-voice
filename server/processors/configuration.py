@@ -40,8 +40,8 @@ from protocol.providers import (
 if TYPE_CHECKING:
     from pipecat.pipeline.llm_switcher import LLMSwitcher
     from pipecat.pipeline.service_switcher import ServiceSwitcher
-    from pipecat.services.ai_services import STTService
     from pipecat.services.llm_service import LLMService
+    from pipecat.services.stt_service import STTService
 
     from config.settings import Settings
 
