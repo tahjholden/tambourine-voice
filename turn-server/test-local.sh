@@ -122,8 +122,6 @@ check_server_health() {
 }
 
 check_turn_listeners() {
-  local udp_line
-  local tcp_line
   local udp_ok=false
   local tcp_ok=false
 

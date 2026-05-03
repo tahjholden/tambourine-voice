@@ -1,0 +1,7 @@
+---
+# hadolint configuration — see https://github.com/hadolint/hadolint
+ignored:
+  # Ubuntu/Debian apt package versions float with security patches and old
+  # versions get pruned from the archive, so a pinned `pkg=1.2.3-ubuntu1` line
+  # eventually fails to install. Pinning is impractical on rolling apt bases.
+  - DL3008

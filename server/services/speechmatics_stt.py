@@ -61,7 +61,7 @@ class ReconnectingSpeechmaticsSTTService(SpeechmaticsSTTService):
 
         await super().process_frame(frame, direction)
 
-    async def run_stt(self, audio: bytes) -> AsyncGenerator[Frame]:
+    async def run_stt(self, audio: bytes) -> AsyncGenerator[Frame | None]:
         """Send audio with transport health check.
 
         If audio frames arrive on a dead transport (e.g. immediately after

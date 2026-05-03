@@ -45,6 +45,10 @@ pre-commit install
 
 After installing hooks, pre-commit will automatically run linting, formatting, and type checking on commit. You can also run checks manually:
 
+```bash
+lychee -v .     # Lint markdown files for broken links and spelling errors
+```
+
 ### TypeScript (app/)
 
 ```bash
@@ -75,6 +79,20 @@ Or use the pnpm wrapper from the app directory:
 pnpm cargo:clippy
 pnpm cargo:fmt
 pnpm cargo        # Run all Rust checks
+```
+
+### Docker
+
+```bash
+hadolint server/Dockerfile turn-server/Dockerfile  # Dockerfile linting
+```
+
+Suppressed rules live in [`.hadolint.yaml`](./.hadolint.yaml) with a comment explaining why each is ignored. Add to that file rather than disabling inline.
+
+### Shell Scripts
+
+```bash
+shellcheck turn-server/*.sh  # Shell script linting
 ```
 
 ## Testing
